@@ -1,0 +1,48 @@
+   1:1    INT             int
+   1:5    IDENTIFIER      main
+   1:9    LPAREN          (
+   1:10   RPAREN          )
+   1:12   LBRACE          {
+   2:5    INT             int
+   2:9    IDENTIFIER      total
+   2:15   ASSIGN          =
+   2:17   INT_LITERAL     10
+erro léxico em 2:20: caractere inválido '@'
+   2:22   INT_LITERAL     2
+   2:23   SEMICOLON       ;
+   3:5    STRING          string
+   3:12   IDENTIFIER      nome
+   3:17   ASSIGN          =
+erro léxico em 3:19: string não fechada antes do fim da linha
+   4:5    DOUBLE          double
+   4:12   IDENTIFIER      taxa
+   4:17   ASSIGN          =
+erro léxico em 4:19: número malformado '3.': falta dígito depois do ponto
+   4:22   PLUS            +
+   4:24   INT_LITERAL     1
+   4:25   SEMICOLON       ;
+   5:5    IF              if
+   5:8    LPAREN          (
+   5:9    IDENTIFIER      total
+   5:15   GT              >
+   5:17   INT_LITERAL     0
+erro léxico em 5:19: '&' sozinho não é operador, o correto é '&&'
+   5:21   IDENTIFIER      nome
+   5:26   NEQ             !=
+   5:29   STRING_LITERAL  ""
+   5:31   RPAREN          )
+   5:33   LBRACE          {
+   6:9    CHAR            char
+   6:14   IDENTIFIER      c
+   6:16   ASSIGN          =
+erro léxico em 6:18: literal de caractere com mais de um caractere
+   6:22   SEMICOLON       ;
+   7:5    RBRACE          }
+   8:5    RETURN          return
+   8:12   INT_LITERAL     0
+   8:13   SEMICOLON       ;
+   9:1    RBRACE          }
+erro léxico em 10:1: comentário de bloco não fechado
+  12:1    EOF             
+
+40 tokens, 6 erro(s) léxico(s)

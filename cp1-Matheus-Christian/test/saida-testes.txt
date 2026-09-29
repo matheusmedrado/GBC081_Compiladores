@@ -1,0 +1,34 @@
+== casos válidos ==
+  [ok]    identificadores
+  [ok]    identificador com o tamanho máximo
+  [ok]    palavras reservadas
+  [ok]    case-sensitive
+  [ok]    strings
+  [ok]    literais de caractere
+  [ok]    literais numéricos
+  [ok]    operadores
+  [ok]    maximal munch
+  [ok]    delimitadores
+  [ok]    comentários
+  [ok]    comentário de bloco não aninha
+  [ok]    linha e coluna
+  [ok]    EOF repetido
+
+== casos de erro ==
+  [ok]    string não fechada até o EOF
+  [ok]    string não fechada até o fim da linha
+  [ok]    caractere fora do alfabeto
+  [ok]    vários caracteres inválidos seguidos
+  [ok]    comentário de bloco não fechado
+  [ok]    número malformado
+  [ok]    & e | sozinhos
+  [ok]    escape inválido em string
+  [ok]    literais de caractere inválidos
+  [ok]    identificador começando com _
+  [ok]    identificador longo demais
+
+== código realista ==
+  [ok]    linha com declarações, expressões e comentários
+  [ok]    programa completo
+
+27 testes, 27 passaram, 0 falharam
