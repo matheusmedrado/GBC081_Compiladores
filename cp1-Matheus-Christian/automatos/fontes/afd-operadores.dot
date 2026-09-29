@@ -1,0 +1,53 @@
+// Operadores com forma composta. Os de um caractere só (+ - * % e os
+// delimitadores) são emitidos direto em START, ver afd-visao-geral.
+digraph operadores {
+    rankdir=LR;
+    bgcolor=white;
+    node [fontname="Helvetica", fontsize=12, shape=circle];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+
+    ASSIGN [shape=doublecircle];
+    BANG [shape=doublecircle];
+    LESS [shape=doublecircle];
+    GREATER [shape=doublecircle];
+    AMP;
+    PIPE;
+
+    node [shape=box, style=rounded];
+    T_ASSIGN [label="emite ASSIGN  ="];
+    T_EQ [label="emite EQ  =="];
+    T_NOT [label="emite NOT  !"];
+    T_NEQ [label="emite NEQ  !="];
+    T_LT [label="emite LT  <"];
+    T_LE [label="emite LE  <="];
+    T_GT [label="emite GT  >"];
+    T_GE [label="emite GE  >="];
+    T_AND [label="emite AND  &&"];
+    T_OR [label="emite OR  ||"];
+    ERRO_AMP [style=dashed, label="erro léxico:\n'&' sozinho"];
+    ERRO_PIPE [style=dashed, label="erro léxico:\n'|' sozinho"];
+
+    inicio -> START;
+    START -> ASSIGN [label="="];
+    START -> BANG [label="!"];
+    START -> LESS [label="<"];
+    START -> GREATER [label=">"];
+    START -> AMP [label="&"];
+    START -> PIPE [label="|"];
+
+    ASSIGN -> T_EQ [label="="];
+    ASSIGN -> T_ASSIGN [label="outro", style=dashed];
+    BANG -> T_NEQ [label="="];
+    BANG -> T_NOT [label="outro", style=dashed];
+    LESS -> T_LE [label="="];
+    LESS -> T_LT [label="outro", style=dashed];
+    GREATER -> T_GE [label="="];
+    GREATER -> T_GT [label="outro", style=dashed];
+    AMP -> T_AND [label="&"];
+    AMP -> ERRO_AMP [label="outro", style=dashed];
+    PIPE -> T_OR [label="|"];
+    PIPE -> ERRO_PIPE [label="outro", style=dashed];
+}

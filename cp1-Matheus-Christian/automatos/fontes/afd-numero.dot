@@ -1,0 +1,26 @@
+// Literal numérico: inteiro ou com parte fracionária.
+digraph numero {
+    rankdir=LR;
+    bgcolor=white;
+    node [fontname="Helvetica", fontsize=12, shape=circle];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+    NUM_INT [shape=doublecircle];
+    NUM_DOT;
+    NUM_FRAC [shape=doublecircle];
+    EMITE_INT [shape=box, style=rounded, label="emite\nINT_LITERAL"];
+    EMITE_DOUBLE [shape=box, style=rounded, label="emite\nDOUBLE_LITERAL"];
+    ERRO [shape=box, style=dashed, label="erro léxico:\nnúmero malformado"];
+
+    inicio -> START;
+    START -> NUM_INT [label="dígito"];
+    NUM_INT -> NUM_INT [label="dígito"];
+    NUM_INT -> NUM_DOT [label="ponto ( . )"];
+    NUM_INT -> EMITE_INT [label="outro", style=dashed];
+    NUM_DOT -> NUM_FRAC [label="dígito"];
+    NUM_DOT -> ERRO [label="outro", style=dashed];
+    NUM_FRAC -> NUM_FRAC [label="dígito"];
+    NUM_FRAC -> EMITE_DOUBLE [label="outro", style=dashed];
+}

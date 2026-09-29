@@ -1,0 +1,20 @@
+// Identificador e palavra reservada: mesmo autômato, a diferença é a
+// consulta na tabela de palavras reservadas quando o lexema termina.
+digraph identificador {
+    rankdir=LR;
+    bgcolor=white;
+    node [fontname="Helvetica", fontsize=12, shape=circle];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+    IDENT [shape=doublecircle];
+    EMITE [shape=box, style=rounded, label="lexema está na tabela?\nsim: emite a palavra reservada\nnão: emite IDENTIFIER"];
+    ERRO [shape=box, style=dashed, label="erro léxico:\nmais de 32 caracteres"];
+
+    inicio -> START;
+    START -> IDENT [label="letra"];
+    IDENT -> IDENT [label="letra | dígito | _"];
+    IDENT -> EMITE [label="outro, até 32 caracteres", style=dashed];
+    IDENT -> ERRO [label="outro, mais de 32", style=dashed];
+}

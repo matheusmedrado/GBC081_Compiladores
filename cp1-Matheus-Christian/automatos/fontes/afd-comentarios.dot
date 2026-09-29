@@ -1,0 +1,35 @@
+// Barra: pode ser divisão, comentário de linha ou comentário de bloco.
+// Comentários não geram token, o autômato volta para START.
+digraph comentarios {
+    rankdir=LR;
+    bgcolor=white;
+    node [fontname="Helvetica", fontsize=12, shape=circle];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+    SLASH [shape=doublecircle];
+    LINE_COMMENT;
+    BLOCK_COMMENT;
+    BLOCK_COMMENT_STAR;
+    EMITE [shape=box, style=rounded, label="emite SLASH  /"];
+    VOLTA [shape=box, style=rounded, label="volta para START\n(sem emitir token)"];
+    ERRO [shape=box, style=dashed, label="erro léxico:\ncomentário de bloco\nnão fechado"];
+
+    inicio -> START;
+    START -> SLASH [label="/"];
+    SLASH -> EMITE [label="outro", style=dashed];
+    SLASH -> LINE_COMMENT [label="/"];
+    SLASH -> BLOCK_COMMENT [label="*"];
+
+    LINE_COMMENT -> LINE_COMMENT [label="qualquer exceto\n\\n e EOF"];
+    LINE_COMMENT -> VOLTA [label="\\n ou EOF", style=dashed];
+
+    BLOCK_COMMENT -> BLOCK_COMMENT [label="qualquer exceto\n* e EOF"];
+    BLOCK_COMMENT -> BLOCK_COMMENT_STAR [label="*"];
+    BLOCK_COMMENT_STAR -> BLOCK_COMMENT_STAR [label="*"];
+    BLOCK_COMMENT_STAR -> VOLTA [label="/"];
+    BLOCK_COMMENT_STAR -> BLOCK_COMMENT [label="qualquer exceto\n* / e EOF"];
+    BLOCK_COMMENT -> ERRO [label="EOF", style=dashed];
+    BLOCK_COMMENT_STAR -> ERRO [label="EOF", style=dashed];
+}

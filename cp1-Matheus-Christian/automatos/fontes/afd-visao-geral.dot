@@ -1,0 +1,38 @@
+// Estado START: decide qual sub-autômato seguir pelo primeiro caractere.
+// Cada estado de destino continua no desenho da sua categoria (afd-*.png).
+digraph visao_geral {
+    rankdir=LR;
+    bgcolor=white;
+    nodesep=0.15;
+    ranksep=1.6;
+    node [fontname="Helvetica", fontsize=11, shape=circle, fixedsize=true, width=1.25];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+
+    IDENT [shape=doublecircle, label="IDENT"];
+    NUM_INT [shape=doublecircle, label="NUM_INT"];
+    STR [label="STR"];
+    CHR [label="CHR"];
+    SLASH [shape=doublecircle, label="SLASH"];
+    OPS [shape=doublecircle, label="ASSIGN\nBANG\nLESS\nGREATER"];
+    AMP_PIPE [label="AMP\nPIPE"];
+    SIMPLES [shape=box, style=rounded, fixedsize=false, label="emite o token de\num caractere"];
+    BRANCO [shape=box, style=rounded, fixedsize=false, label="descarta e\ncontinua em START"];
+    EOFTOK [shape=box, style=rounded, fixedsize=false, label="emite EOF"];
+    ERRO [shape=box, style=dashed, fixedsize=false, label="erro léxico: caractere\ndescartado, volta a START"];
+
+    inicio -> START;
+    START -> BRANCO [label="espaço \\t \\r \\n"];
+    START -> IDENT [label="letra"];
+    START -> NUM_INT [label="dígito"];
+    START -> STR [label="\""];
+    START -> CHR [label="'"];
+    START -> SLASH [label="/"];
+    START -> OPS [label="=  !  <  >"];
+    START -> AMP_PIPE [label="&  |"];
+    START -> SIMPLES [label="+ - * % ( ) { } ; ,"];
+    START -> EOFTOK [label="fim do arquivo", style=dashed];
+    START -> ERRO [label="_ ou caractere\nfora do alfabeto"];
+}

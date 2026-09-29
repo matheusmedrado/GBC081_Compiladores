@@ -1,0 +1,35 @@
+// Literal de caractere: exatamente um caractere (ou um escape) entre aspas simples.
+digraph caractere {
+    rankdir=LR;
+    bgcolor=white;
+    node [fontname="Helvetica", fontsize=12, shape=circle];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+    CHR;
+    CHR_ESC;
+    CHR_END;
+    CHR_LONG;
+    EMITE [shape=box, style=rounded, label="emite\nCHAR_LITERAL"];
+    ERRO_VAZIO [shape=box, style=dashed, label="erro léxico:\nliteral vazio"];
+    ERRO_ABERTO [shape=box, style=dashed, label="erro léxico:\nnão fechado"];
+    ERRO_LONGO [shape=box, style=dashed, label="erro léxico:\nmais de um caractere"];
+
+    inicio -> START;
+    START -> CHR [label="'"];
+    CHR -> ERRO_VAZIO [label="'"];
+    CHR -> CHR_ESC [label="\\"];
+    CHR -> CHR_END [label="qualquer outro\nexceto \\n e EOF"];
+    CHR_ESC -> CHR_END [label="n  t  \\  \"  '"];
+    CHR_ESC -> CHR_END [label="outro (erro:\nescape inválido)"];
+    CHR_END -> EMITE [label="'"];
+    CHR_END -> CHR_LONG [label="outro exceto\n\\n e EOF"];
+    CHR_LONG -> CHR_LONG [label="qualquer exceto\n'  \\n  EOF"];
+    CHR_LONG -> ERRO_LONGO [label="'"];
+
+    CHR -> ERRO_ABERTO [label="\\n ou EOF", style=dashed];
+    CHR_ESC -> ERRO_ABERTO [label="\\n ou EOF", style=dashed];
+    CHR_END -> ERRO_ABERTO [label="\\n ou EOF", style=dashed];
+    CHR_LONG -> ERRO_ABERTO [label="\\n ou EOF", style=dashed];
+}

@@ -1,0 +1,24 @@
+// Literal string: não pode ter quebra de linha.
+digraph string {
+    rankdir=LR;
+    bgcolor=white;
+    node [fontname="Helvetica", fontsize=12, shape=circle];
+    edge [fontname="Helvetica", fontsize=11];
+
+    inicio [shape=point, width=0.1];
+    START;
+    STR;
+    STR_ESC;
+    EMITE [shape=box, style=rounded, label="emite\nSTRING_LITERAL"];
+    ERRO [shape=box, style=dashed, label="erro léxico:\nstring não fechada"];
+
+    inicio -> START;
+    START -> STR [label="\""];
+    STR -> STR [label="qualquer caractere\nexceto \"  \\  \\n  EOF"];
+    STR -> EMITE [label="\""];
+    STR -> STR_ESC [label="\\"];
+    STR_ESC -> STR [label="n  t  \\  \"  '"];
+    STR_ESC -> STR [label="outro (erro: escape inválido,\nsegue lendo a string)"];
+    STR -> ERRO [label="\\n ou EOF", style=dashed];
+    STR_ESC -> ERRO [label="\\n ou EOF", style=dashed];
+}
