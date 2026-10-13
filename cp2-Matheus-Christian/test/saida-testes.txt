@@ -1,0 +1,72 @@
+$ java -cp out lexer.ScannerTest
+== casos válidos ==
+  [ok]    identificadores
+  [ok]    identificador com o tamanho máximo
+  [ok]    palavras reservadas
+  [ok]    case-sensitive
+  [ok]    strings
+  [ok]    literais de caractere
+  [ok]    literais numéricos
+  [ok]    operadores
+  [ok]    maximal munch
+  [ok]    delimitadores
+  [ok]    comentários
+  [ok]    comentário de bloco não aninha
+  [ok]    linha e coluna
+  [ok]    EOF repetido
+
+== casos de erro ==
+  [ok]    string não fechada até o EOF
+  [ok]    string não fechada até o fim da linha
+  [ok]    caractere fora do alfabeto
+  [ok]    vários caracteres inválidos seguidos
+  [ok]    comentário de bloco não fechado
+  [ok]    número malformado
+  [ok]    & e | sozinhos
+  [ok]    escape inválido em string
+  [ok]    literais de caractere inválidos
+  [ok]    identificador começando com _
+  [ok]    identificador longo demais
+
+== código realista ==
+  [ok]    linha com declarações, expressões e comentários
+  [ok]    programa completo
+
+27 testes, 27 passaram, 0 falharam
+
+$ java -cp out parser.ParserTest
+== programas válidos ==
+  [ok]    programa do CP1 (fatorial)
+  [ok]    tipos básicos e declarações
+  [ok]    seleção e repetição
+  [ok]    procedimentos e funções
+  [ok]    precedência e operadores unários
+  [ok]    bloco solto e blocos vazios
+  [ok]    programa vazio ou só com comentários
+
+== programas com um erro ==
+  [ok]    falta ';' depois de expressão
+  [ok]    falta ';' depois de chamada
+  [ok]    expressão incompleta
+  [ok]    if sem '('
+  [ok]    ')' a mais
+  [ok]    corpo de if sem chaves
+  [ok]    comparação encadeada (ε robusto)
+  [ok]    atribuição dentro da condição
+  [ok]    comando fora de função
+  [ok]    parâmetro sem tipo
+  [ok]    else sem if
+  [ok]    falta '}' no fim do arquivo
+  [ok]    erro léxico vira erro sintático
+
+== vários erros numa rodada só ==
+  [ok]    quatro erros em funções diferentes
+  [ok]    mesmo erro repetido em cada função
+  [ok]    erros em cascata não são reportados
+
+== nenhum caminho de erro trava ==
+  [ok]    todos os prefixos de um programa
+  [ok]    programa sem cada um dos tokens
+  [ok]    sequências aleatórias de tokens
+
+26 testes, 26 passaram, 0 falharam

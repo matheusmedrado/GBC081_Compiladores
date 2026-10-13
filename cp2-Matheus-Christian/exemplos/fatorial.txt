@@ -1,0 +1,24 @@
+// calcula o fatorial e confere o resultado
+int fatorial(int n) {
+    int r = 1;
+    while (n > 1) {
+        r = r * n;
+        n = n - 1;
+    }
+    return r;
+}
+
+void main() {
+    /* testa com
+       um valor fixo */
+    int x = fatorial(5);
+    double media = (x + 0.5) / 2.0;
+    bool ok = x == 120 && !(media <= 0.0);
+    char c = 'x';
+    if (x != 120 || c == '\n') {
+        imprime("errado");
+    } else {
+        imprime("ok: 5! = 120");
+    }
+    return;
+}

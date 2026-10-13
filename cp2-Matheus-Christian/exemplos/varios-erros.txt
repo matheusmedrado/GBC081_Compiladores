@@ -1,0 +1,22 @@
+// quatro erros sintáticos, um em cada lugar; o resto do programa está certo
+int soma(int a, int b) {
+    int r = a + b
+    return r;
+}
+
+void mostra(string msg) {
+    if (msg == "") {
+        imprime("vazio";
+    } else {
+        imprime(msg);
+    }
+}
+
+int main() {
+    int x = soma(1, 2);
+    while (x > 0 {
+        x = x - * 1;
+    }
+    mostra("fim");
+    return 0;
+}
