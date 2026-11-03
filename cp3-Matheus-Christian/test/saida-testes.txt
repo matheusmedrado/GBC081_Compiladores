@@ -1,0 +1,96 @@
+== programas válidos ==
+  [ok]    programa do CP1 (fatorial)
+  [ok]    tipos básicos e declarações
+  [ok]    seleção e repetição
+  [ok]    procedimentos e funções
+  [ok]    precedência e operadores unários
+  [ok]    bloco solto e blocos vazios
+  [ok]    programa vazio ou só com comentários
+
+== árvore esperada ==
+  [ok]    árvore do fatorial
+  [ok]    árvore de tipos e declarações
+  [ok]    árvore de seleção e repetição
+  [ok]    árvore de procedimentos e funções
+  [ok]    árvore dos primos
+  [ok]    posição guardada em cada nó
+
+== precedência, associatividade e parênteses ==
+  [ok]    precedências diferentes (a + b * c)
+  [ok]    mesmo operador repetido (a - b - c)
+  [ok]    parênteses que mudam a árvore (a - (b - c))
+  [ok]    as três árvores são diferentes
+  [ok]    parênteses redundantes não viram nó
+
+== ida e volta ==
+  [ok]    ida e volta do fatorial
+  [ok]    ida e volta de tipos e declarações
+  [ok]    ida e volta de seleção e repetição
+  [ok]    ida e volta de procedimentos e funções
+  [ok]    ida e volta dos primos
+  [ok]    ida e volta de precedência e operadores unários
+  [ok]    ida e volta de bloco solto e blocos vazios
+  [ok]    ida e volta do programa vazio ou só com comentários
+  [ok]    ida e volta dos programas de precedência e parênteses
+
+== programas com um erro ==
+  [ok]    falta ';' depois de expressão
+  [ok]    falta ';' depois de chamada
+  [ok]    expressão incompleta
+  [ok]    if sem '('
+  [ok]    ')' a mais
+  [ok]    corpo de if sem chaves
+  [ok]    comparação encadeada (ε robusto)
+  [ok]    atribuição dentro da condição
+  [ok]    comando fora de função
+  [ok]    parâmetro sem tipo
+  [ok]    else sem if
+  [ok]    falta '}' no fim do arquivo
+  [ok]    erro léxico vira erro sintático
+
+== vários erros numa rodada só ==
+  [ok]    quatro erros em funções diferentes
+  [ok]    mesmo erro repetido em cada função
+  [ok]    erros em cascata não são reportados
+
+== árvore inválida e nenhum caminho de erro trava ==
+  [ok]    com erro a árvore vem nula
+  [ok]    todos os prefixos de um programa
+  [ok]    programa sem cada um dos tokens
+  [ok]    sequências aleatórias de tokens
+
+47 testes, 47 passaram, 0 falharam
+== casos válidos ==
+  [ok]    identificadores
+  [ok]    identificador com o tamanho máximo
+  [ok]    palavras reservadas
+  [ok]    case-sensitive
+  [ok]    strings
+  [ok]    literais de caractere
+  [ok]    literais numéricos
+  [ok]    operadores
+  [ok]    maximal munch
+  [ok]    delimitadores
+  [ok]    comentários
+  [ok]    comentário de bloco não aninha
+  [ok]    linha e coluna
+  [ok]    EOF repetido
+
+== casos de erro ==
+  [ok]    string não fechada até o EOF
+  [ok]    string não fechada até o fim da linha
+  [ok]    caractere fora do alfabeto
+  [ok]    vários caracteres inválidos seguidos
+  [ok]    comentário de bloco não fechado
+  [ok]    número malformado
+  [ok]    & e | sozinhos
+  [ok]    escape inválido em string
+  [ok]    literais de caractere inválidos
+  [ok]    identificador começando com _
+  [ok]    identificador longo demais
+
+== código realista ==
+  [ok]    linha com declarações, expressões e comentários
+  [ok]    programa completo
+
+27 testes, 27 passaram, 0 falharam

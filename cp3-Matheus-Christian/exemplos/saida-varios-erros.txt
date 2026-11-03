@@ -1,0 +1,21 @@
+== traço ==
+erro sintático em 4:5: encontrado 'return', esperado operador, '(', ')', ';' ou ','
+    [CallSuffix] nada descartado; sincronizou em 'return' (4:5)
+    [match] em cascata: ';' ausente, segue sem consumir
+erro sintático em 9:24: encontrado ';', esperado ')' ou ','
+    [ArgList] descartou ';'; sincronizou em '}' (10:5)
+    [match] em cascata: ')' ausente, segue sem consumir
+    [match] em cascata: ';' ausente, segue sem consumir
+erro sintático em 17:18: encontrado '{', esperado operador, ')', ';' ou ','
+    [MulRest] nada descartado; sincronizou em '{' (17:18)
+    [match] em cascata: ')' ausente, segue sem consumir
+erro sintático em 18:17: encontrado '*', esperado expressão
+    [Unary] nada descartado; sincronizou em '*' (18:17)
+
+== erros ==
+erro sintático em 4:5: encontrado 'return', esperado operador, '(', ')', ';' ou ','
+erro sintático em 9:24: encontrado ';', esperado ')' ou ','
+erro sintático em 17:18: encontrado '{', esperado operador, ')', ';' ou ','
+erro sintático em 18:17: encontrado '*', esperado expressão
+
+programa rejeitado: 0 erro(s) léxico(s), 4 erro(s) sintático(s)

@@ -1,0 +1,53 @@
+// lista os primos até um limite e mostra algumas estatísticas
+int limite = 50;
+string titulo = "primos";
+
+bool ehPrimo(int n) {
+    if (n < 2) {
+        return false;
+    }
+    int d = 2;
+    while (d * d <= n) {
+        if (n % d == 0) {
+            return false;
+        }
+        d = d + 1;
+    }
+    return true;
+}
+
+double media(int soma, int quantidade) {
+    if (quantidade == 0) {
+        return 0.0;
+    }
+    return soma / (quantidade * 1.0);
+}
+
+void mostra(string rotulo, int valor) {
+    imprime(rotulo);
+    imprime(valor);
+}
+
+int main() {
+    int n = 2, quantidade = 0, soma = 0;
+    char separador = ',';
+    bool achouGemeos = false;
+    while (n <= limite) {
+        if (ehPrimo(n)) {
+            quantidade = quantidade + 1;
+            soma = soma + n;
+            if (ehPrimo(n + 2) && !achouGemeos) {
+                achouGemeos = true;
+                mostra("primeiro par de gêmeos começa em", n);
+            }
+        } else if (n % 2 == 0) {
+            // par maior que 2: nunca é primo
+        } else {
+            imprime(separador);
+        }
+        n = n + 1;
+    }
+    mostra(titulo, quantidade);
+    imprime(media(soma, quantidade));
+    return 0;
+}

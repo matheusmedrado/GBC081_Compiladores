@@ -1,0 +1,95 @@
+Program
+  FuncDecl(nada)
+    Block
+  FuncDecl(avisa)
+    Param(msg)
+      Type(string)
+    Block
+      CallStmt
+        Call(imprime)
+          Id(msg)
+      Return
+  FuncDecl(media3)
+    Type(double)
+    Param(a)
+      Type(double)
+    Param(b)
+      Type(double)
+    Param(c)
+      Type(double)
+    Block
+      Return
+        Bin(/)
+          Bin(+)
+            Bin(+)
+              Id(a)
+              Id(b)
+            Id(c)
+          Literal(double, 3.0)
+  FuncDecl(fib)
+    Type(int)
+    Param(n)
+      Type(int)
+    Block
+      If
+        Bin(<)
+          Id(n)
+          Literal(int, 2)
+        Block
+          Return
+            Id(n)
+      Return
+        Bin(+)
+          Call(fib)
+            Bin(-)
+              Id(n)
+              Literal(int, 1)
+          Call(fib)
+            Bin(-)
+              Id(n)
+              Literal(int, 2)
+  FuncDecl(par)
+    Type(bool)
+    Param(n)
+      Type(int)
+    Block
+      Return
+        Bin(==)
+          Bin(%)
+            Id(n)
+            Literal(int, 2)
+          Literal(int, 0)
+  FuncDecl(main)
+    Type(int)
+    Block
+      CallStmt
+        Call(nada)
+      CallStmt
+        Call(avisa)
+          Literal(string, "oi")
+      VarDecl
+        Type(double)
+        Var(m)
+          Call(media3)
+            Literal(double, 1.0)
+            Literal(double, 2.0)
+            Call(fib)
+              Literal(int, 3)
+      VarDecl
+        Type(bool)
+        Var(p)
+          Call(par)
+            Call(fib)
+              Call(media3)
+                Literal(int, 1)
+                Literal(int, 2)
+                Literal(int, 3)
+      CallStmt
+        Call(imprime)
+          Id(m)
+          Id(p)
+          Literal(char, 'x')
+          Literal(string, "fim")
+          Literal(bool, true)
+      Return
+        Literal(int, 0)
