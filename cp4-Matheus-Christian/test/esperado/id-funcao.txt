@@ -1,0 +1,4 @@
+erros:
+usos:
+linha 2: n -> n@1 parâmetro
+linha 6: id -> id@1 função

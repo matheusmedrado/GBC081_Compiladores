@@ -1,0 +1,5 @@
+erros:
+linha 1: 'a' já declarado neste escopo (linha 1)
+linha 6: 'a' já declarado neste escopo (linha 5)
+usos:
+linha 12: a -> a@11 variável

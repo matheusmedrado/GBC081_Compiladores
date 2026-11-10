@@ -1,0 +1,83 @@
+Program
+  FuncDecl(classifica)
+    Type(int)
+    Param(n)
+      Type(int)
+    Block
+      If
+        Bin(<)
+          Id(n)
+          Literal(int, 0)
+        Block
+          Return
+            Unary(-)
+              Literal(int, 1)
+        If
+          Bin(==)
+            Id(n)
+            Literal(int, 0)
+          Block
+            Return
+              Literal(int, 0)
+          If
+            Bin(<=)
+              Id(n)
+              Literal(int, 9)
+            Block
+              Return
+                Literal(int, 1)
+            Block
+              Return
+                Literal(int, 2)
+  FuncDecl(tabuada)
+    Block
+      VarDecl
+        Type(int)
+        Var(i)
+          Literal(int, 1)
+      While
+        Bin(<=)
+          Id(i)
+          Literal(int, 10)
+        Block
+          VarDecl
+            Type(int)
+            Var(j)
+              Literal(int, 1)
+          While
+            Bin(<=)
+              Id(j)
+              Literal(int, 10)
+            Block
+              If
+                Bin(&&)
+                  Bin(==)
+                    Bin(%)
+                      Bin(*)
+                        Id(i)
+                        Id(j)
+                      Literal(int, 2)
+                    Literal(int, 0)
+                  Unary(!)
+                    Bin(==)
+                      Id(i)
+                      Id(j)
+                Block
+                  CallStmt
+                    Call(imprime)
+                      Bin(*)
+                        Id(i)
+                        Id(j)
+              Assign(j)
+                Bin(+)
+                  Id(j)
+                  Literal(int, 1)
+          Assign(i)
+            Bin(+)
+              Id(i)
+              Literal(int, 1)
+      If
+        Bin(>)
+          Id(i)
+          Literal(int, 10)
+        Block

@@ -1,0 +1,7 @@
+erros:
+linha 3: 'f' já declarado neste escopo (linha 1)
+usos:
+linha 8: g -> g@7 variável
+linha 9: g -> g@7 variável
+linha 13: h -> h@12 parâmetro
+linha 13: h -> h@12 parâmetro

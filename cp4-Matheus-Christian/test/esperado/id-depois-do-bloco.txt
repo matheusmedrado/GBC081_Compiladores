@@ -1,0 +1,6 @@
+erros:
+linha 7: 'a' não declarado
+usos:
+linha 4: a -> a@3 variável
+linha 7: b -> b@6 variável
+linha 7: a -> ?

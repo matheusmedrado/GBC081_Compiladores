@@ -1,0 +1,19 @@
+int x;
+
+void f(int n) {
+    int x;
+    x = n;
+    {
+        int x;
+        x = n;
+        {
+            int y;
+            y = x;
+        }
+    }
+    x = n;
+}
+
+void main() {
+    x = 1;
+}

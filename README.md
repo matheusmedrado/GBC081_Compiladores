@@ -7,6 +7,7 @@ Projeto do semestre (UFU, FACOM): um compilador para uma linguagem no estilo de 
 | Checkpoint 1: especificação léxica e scanner | [cp1-Matheus-Christian](cp1-Matheus-Christian) |
 | Checkpoint 2: gramática LL(1) e parser recursivo descendente | [cp2-Matheus-Christian](cp2-Matheus-Christian) |
 | Checkpoint 3: árvore de sintaxe abstrata e visitors | [cp3-Matheus-Christian](cp3-Matheus-Christian) |
+| Checkpoint 4: tabela de símbolos e identificação | [cp4-Matheus-Christian](cp4-Matheus-Christian) |
 
 Matheus Medrado Ferreira - 12311BCC054
 Christian Silva Rodrigues- 12311BCC025

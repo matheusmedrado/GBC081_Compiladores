@@ -1,0 +1,11 @@
+int main() {
+    int total = 10 @ 2;
+    string nome = "sem fechar
+    double taxa = 3. + 1;
+    if (total > 0 & nome != "") {
+        char c = 'ab';
+    }
+    return 0;
+}
+/* este comentário nunca fecha
+int perdido = 1;

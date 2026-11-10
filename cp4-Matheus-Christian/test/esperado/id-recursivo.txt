@@ -1,0 +1,5 @@
+erros:
+usos:
+linha 2: n -> n@1 parâmetro
+linha 3: contagem -> contagem@1 procedimento
+linha 3: n -> n@1 parâmetro

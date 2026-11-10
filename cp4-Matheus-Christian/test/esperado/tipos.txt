@@ -1,0 +1,63 @@
+Program
+  VarDecl
+    Type(int)
+    Var(contador)
+  VarDecl
+    Type(double)
+    Var(taxa)
+      Literal(double, 0.25)
+  VarDecl
+    Type(bool)
+    Var(ativo)
+      Literal(bool, true)
+    Var(pronto)
+      Literal(bool, false)
+  VarDecl
+    Type(char)
+    Var(letra)
+      Literal(char, 'a')
+    Var(quebra)
+      Literal(char, '\n')
+  VarDecl
+    Type(string)
+    Var(nome)
+      Literal(string, "Ana")
+    Var(vazio)
+      Literal(string, "")
+  VarDecl
+    Type(int)
+    Var(a)
+    Var(b)
+      Literal(int, 2)
+    Var(c)
+  FuncDecl(main)
+    Block
+      VarDecl
+        Type(int)
+        Var(x)
+          Literal(int, 10)
+      VarDecl
+        Type(double)
+        Var(y)
+          Literal(double, 3.14)
+        Var(z)
+      VarDecl
+        Type(bool)
+        Var(b)
+          Unary(!)
+            Id(ativo)
+      VarDecl
+        Type(char)
+        Var(aspas)
+          Literal(char, '\'')
+      VarDecl
+        Type(string)
+        Var(s)
+          Literal(string, "diz \"oi\"")
+      VarDecl
+        Type(int)
+        Var(negativo)
+          Unary(-)
+            Literal(int, 1)
+      Assign(x)
+        Literal(int, 007)

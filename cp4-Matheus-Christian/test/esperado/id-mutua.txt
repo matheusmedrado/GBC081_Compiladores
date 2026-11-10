@@ -1,0 +1,9 @@
+erros:
+linha 3: 'impar' não declarado
+usos:
+linha 2: n -> n@1 parâmetro
+linha 3: impar -> ?
+linha 3: n -> n@1 parâmetro
+linha 8: n -> n@7 parâmetro
+linha 9: par -> par@1 procedimento
+linha 9: n -> n@7 parâmetro

@@ -1,0 +1,13 @@
+void f() {
+    x = 1;
+}
+
+int x;
+
+void main() {
+    int a;
+    a = b;
+    int b;
+    b = a;
+    a = x;
+}
