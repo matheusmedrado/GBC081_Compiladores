@@ -1,0 +1,73 @@
+Program
+  FuncDecl(fatorial)
+    Type(int)
+    Param(n)
+      Type(int)
+    Block
+      VarDecl
+        Type(int)
+        Var(r)
+          Literal(int, 1)
+      While
+        Bin(>)
+          Id(n)
+          Literal(int, 1)
+        Block
+          Assign(r)
+            Bin(*)
+              Id(r)
+              Id(n)
+          Assign(n)
+            Bin(-)
+              Id(n)
+              Literal(int, 1)
+      Return
+        Id(r)
+  FuncDecl(main)
+    Block
+      VarDecl
+        Type(int)
+        Var(x)
+          Call(fatorial)
+            Literal(int, 5)
+      VarDecl
+        Type(double)
+        Var(media)
+          Bin(/)
+            Bin(+)
+              Id(x)
+              Literal(double, 0.5)
+            Literal(double, 2.0)
+      VarDecl
+        Type(bool)
+        Var(ok)
+          Bin(&&)
+            Bin(==)
+              Id(x)
+              Literal(int, 120)
+            Unary(!)
+              Bin(<=)
+                Id(media)
+                Literal(double, 0.0)
+      VarDecl
+        Type(char)
+        Var(c)
+          Literal(char, 'x')
+      If
+        Bin(||)
+          Bin(!=)
+            Id(x)
+            Literal(int, 120)
+          Bin(==)
+            Id(c)
+            Literal(char, '\n')
+        Block
+          CallStmt
+            Call(imprime)
+              Literal(string, "errado")
+        Block
+          CallStmt
+            Call(imprime)
+              Literal(string, "ok: 5! = 120")
+      Return
+programa aceito

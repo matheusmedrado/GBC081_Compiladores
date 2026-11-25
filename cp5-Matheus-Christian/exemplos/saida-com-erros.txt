@@ -1,0 +1,13 @@
+erro léxico em 2:20: caractere inválido '@'
+erro sintático em 2:22: encontrado '2', esperado operador, ')', ';' ou ','
+erro léxico em 3:19: string não fechada antes do fim da linha
+erro sintático em 4:5: encontrado 'double', esperado expressão
+erro léxico em 4:19: número malformado '3.': falta dígito depois do ponto
+erro sintático em 4:22: encontrado '+', esperado expressão
+erro léxico em 5:19: '&' sozinho não é operador, o correto é '&&'
+erro sintático em 5:21: encontrado 'nome', esperado operador, ')', ';' ou ','
+erro léxico em 6:18: literal de caractere com mais de um caractere
+erro sintático em 6:22: encontrado ';', esperado expressão
+erro léxico em 10:1: comentário de bloco não fechado
+
+programa rejeitado: 6 erro(s) léxico(s), 5 erro(s) sintático(s)

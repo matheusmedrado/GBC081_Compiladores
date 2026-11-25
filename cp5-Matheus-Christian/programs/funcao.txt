@@ -1,0 +1,7 @@
+int id(int n) {
+    return n;
+}
+
+void main() {
+    id(1);
+}

@@ -1,0 +1,11 @@
+void par(int n) {
+    if (n > 0) {
+        impar(n - 1);
+    }
+}
+
+void impar(int n) {
+    if (n > 0) {
+        par(n - 1);
+    }
+}

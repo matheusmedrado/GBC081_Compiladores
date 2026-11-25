@@ -1,0 +1,5 @@
+void contagem(int n) {
+    if (n > 0) {
+        contagem(n - 1);
+    }
+}

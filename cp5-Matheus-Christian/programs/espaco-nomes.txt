@@ -1,0 +1,14 @@
+int f;
+
+void f() {
+}
+
+void g() {
+    int g;
+    g = 1;
+    g();
+}
+
+void h(int h) {
+    h = h;
+}

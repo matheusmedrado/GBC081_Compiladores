@@ -1,0 +1,157 @@
+Program
+  VarDecl
+    Type(int)
+    Var(limite)
+      Literal(int, 50)
+  VarDecl
+    Type(string)
+    Var(titulo)
+      Literal(string, "primos")
+  FuncDecl(ehPrimo)
+    Type(bool)
+    Param(n)
+      Type(int)
+    Block
+      If
+        Bin(<)
+          Id(n)
+          Literal(int, 2)
+        Block
+          Return
+            Literal(bool, false)
+      VarDecl
+        Type(int)
+        Var(d)
+          Literal(int, 2)
+      While
+        Bin(<=)
+          Bin(*)
+            Id(d)
+            Id(d)
+          Id(n)
+        Block
+          If
+            Bin(==)
+              Bin(%)
+                Id(n)
+                Id(d)
+              Literal(int, 0)
+            Block
+              Return
+                Literal(bool, false)
+          Assign(d)
+            Bin(+)
+              Id(d)
+              Literal(int, 1)
+      Return
+        Literal(bool, true)
+  FuncDecl(media)
+    Type(double)
+    Param(soma)
+      Type(int)
+    Param(quantidade)
+      Type(int)
+    Block
+      If
+        Bin(==)
+          Id(quantidade)
+          Literal(int, 0)
+        Block
+          Return
+            Literal(double, 0.0)
+      Return
+        Bin(/)
+          Id(soma)
+          Bin(*)
+            Id(quantidade)
+            Literal(double, 1.0)
+  FuncDecl(mostra)
+    Param(rotulo)
+      Type(string)
+    Param(valor)
+      Type(int)
+    Block
+      CallStmt
+        Call(imprime)
+          Id(rotulo)
+      CallStmt
+        Call(imprime)
+          Id(valor)
+  FuncDecl(main)
+    Type(int)
+    Block
+      VarDecl
+        Type(int)
+        Var(n)
+          Literal(int, 2)
+        Var(quantidade)
+          Literal(int, 0)
+        Var(soma)
+          Literal(int, 0)
+      VarDecl
+        Type(char)
+        Var(separador)
+          Literal(char, ',')
+      VarDecl
+        Type(bool)
+        Var(achouGemeos)
+          Literal(bool, false)
+      While
+        Bin(<=)
+          Id(n)
+          Id(limite)
+        Block
+          If
+            Call(ehPrimo)
+              Id(n)
+            Block
+              Assign(quantidade)
+                Bin(+)
+                  Id(quantidade)
+                  Literal(int, 1)
+              Assign(soma)
+                Bin(+)
+                  Id(soma)
+                  Id(n)
+              If
+                Bin(&&)
+                  Call(ehPrimo)
+                    Bin(+)
+                      Id(n)
+                      Literal(int, 2)
+                  Unary(!)
+                    Id(achouGemeos)
+                Block
+                  Assign(achouGemeos)
+                    Literal(bool, true)
+                  CallStmt
+                    Call(mostra)
+                      Literal(string, "primeiro par de gêmeos começa em")
+                      Id(n)
+            If
+              Bin(==)
+                Bin(%)
+                  Id(n)
+                  Literal(int, 2)
+                Literal(int, 0)
+              Block
+              Block
+                CallStmt
+                  Call(imprime)
+                    Id(separador)
+          Assign(n)
+            Bin(+)
+              Id(n)
+              Literal(int, 1)
+      CallStmt
+        Call(mostra)
+          Id(titulo)
+          Id(quantidade)
+      CallStmt
+        Call(imprime)
+          Call(media)
+            Id(soma)
+            Id(quantidade)
+      Return
+        Literal(int, 0)
+programa aceito
