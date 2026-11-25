@@ -4,6 +4,7 @@
 cp5-Matheus-Christian/
   tipos-a-mao.pdf        Parte 1, escrita à mão (cópia de tipos-design.md): regras, tabela e decisões
   tipos-design.md        o mesmo conteúdo passado a limpo, com o formato das mensagens
+  log-uso-ia.md          o log de uso de ferramentas de IA
   escopo-design.md       o ambiente e as decisões de escopo do CP4
   ast-design.md          a hierarquia do CP3
   gramatica-first-follow.md
