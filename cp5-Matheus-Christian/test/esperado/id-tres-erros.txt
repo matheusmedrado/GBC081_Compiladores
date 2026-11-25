@@ -1,0 +1,11 @@
+erros:
+linha 2: 'a' não declarado
+linha 4: 'c' não declarado
+linha 5: 'b' já declarado neste escopo (linha 3)
+linha 6: 'd' não declarado
+usos:
+linha 2: a -> ?
+linha 4: b -> b@3 variável
+linha 4: c -> ?
+linha 6: d -> ?
+linha 6: b -> b@3 variável

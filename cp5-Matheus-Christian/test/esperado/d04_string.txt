@@ -1,0 +1,4 @@
+linha 8: operador '==' não se aplica a string e string
+linha 9: operador '<' não se aplica a string e string
+linha 10: operador '+' não se aplica a string e string
+programa rejeitado

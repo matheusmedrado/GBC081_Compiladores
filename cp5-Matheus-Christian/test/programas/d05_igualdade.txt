@@ -1,0 +1,11 @@
+void main() {
+    int i = 1;
+    double d = 1.0;
+    char c = 'a';
+    bool b = false;
+    bool r1 = i == d;
+    bool r2 = c != i;
+    bool r3 = b == false;
+    bool r4 = i == b;
+    bool r5 = c == "a";
+}

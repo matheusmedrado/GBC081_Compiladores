@@ -1,0 +1,8 @@
+void avisa() {
+}
+
+void main() {
+    int a = avisa();
+    a = 1 + avisa();
+    avisa();
+}

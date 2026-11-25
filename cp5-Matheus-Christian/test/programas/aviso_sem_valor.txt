@@ -1,0 +1,19 @@
+int g;
+
+int f(int p) {
+    int a;
+    int b;
+    int c;
+    int d = d + 1;
+    if (p > 0) {
+        a = 1;
+        b = 1;
+    } else {
+        a = 2;
+    }
+    while (p > 0) {
+        c = p;
+        p = p - 1;
+    }
+    return a + b + c + d + g + p;
+}

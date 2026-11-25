@@ -1,0 +1,11 @@
+Program
+  FuncDecl(main)
+    Block
+      VarDecl
+        Type(bool)
+        Var(r)
+          Bin(-)
+            Bin(-)
+              Id(a)
+              Id(b)
+            Id(c)

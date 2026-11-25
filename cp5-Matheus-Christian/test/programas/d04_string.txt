@@ -1,0 +1,12 @@
+string saudacao(string nome) {
+    return nome;
+}
+
+void main() {
+    string a = "oi";
+    string b = saudacao(a);
+    bool igual = a == b;
+    bool menor = a < b;
+    string c = a + b;
+    b = a;
+}

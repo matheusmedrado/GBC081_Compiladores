@@ -1,0 +1,6 @@
+linha 12: 'fat' espera 1 argumento(s), recebeu 2
+linha 13: argumento 1 de 'mostra': esperado string, veio int
+linha 14: argumento 2 de 'mostra': esperado int, veio double
+linha 15: 'mostra' espera 2 argumento(s), recebeu 1
+linha 16: 'x' não é função nem procedimento
+programa rejeitado

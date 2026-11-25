@@ -1,0 +1,53 @@
+int total = 0;
+double taxa = 1.5;
+char inicial = 'a';
+bool ligado = true;
+string nome = "tipos";
+
+double escala(double x, int vezes) {
+    double r = x * vezes;
+    return r / 2;
+}
+
+bool maiorQue(char c, int limite) {
+    return c > limite;
+}
+
+int soma(int a, int b) {
+    if (a < 0) {
+        return -a + b;
+    } else {
+        return a + b;
+    }
+}
+
+void mostra(string s, double v) {
+    return;
+}
+
+void main() {
+    int i = 0;
+    double d = 2;
+    char c = 'z';
+    bool fim = false;
+    string s = nome;
+    while (i < 10 && !fim) {
+        i = i + 1;
+        total = soma(total, i % 3);
+        if (i == 5 || c == 'q') {
+            fim = true;
+        } else if (maiorQue(c, 100)) {
+            d = d + escala(taxa, i);
+        }
+    }
+    d = d * -1;
+    d = c + 1;
+    ligado = ligado != fim;
+    mostra(s, i);
+    soma(1, 2);
+    {
+        int bloco = total * 2;
+        total = bloco - inicial;
+    }
+    return;
+}

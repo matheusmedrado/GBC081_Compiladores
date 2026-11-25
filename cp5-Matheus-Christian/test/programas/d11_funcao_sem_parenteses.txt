@@ -1,0 +1,13 @@
+int cinco() {
+    return 5;
+}
+
+void nada() {
+}
+
+void main() {
+    int x = cinco;
+    x = cinco();
+    cinco = 3;
+    bool b = nada == true;
+}

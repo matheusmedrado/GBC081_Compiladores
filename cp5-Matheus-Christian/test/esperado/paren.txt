@@ -1,0 +1,7 @@
+Program
+  FuncDecl(main)
+    Block
+      VarDecl
+        Type(bool)
+        Var(r)
+          Id(a)

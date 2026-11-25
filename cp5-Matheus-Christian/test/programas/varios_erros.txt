@@ -1,0 +1,14 @@
+int dobro(int n) {
+    return n * 2;
+}
+
+void main() {
+    int a = true;
+    bool b = (a + "x") * 2 > 1;
+    c = a + 1;
+    int d = c * 2 + dobro(c);
+    if (dobro(a) && b) {
+        a = 1.5;
+    }
+    b = dobro;
+}

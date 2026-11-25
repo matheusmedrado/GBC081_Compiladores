@@ -1,0 +1,4 @@
+linha 2: 'return' de 'metade': esperado int, veio double
+linha 6: 'return' com valor no procedimento 'nada'
+linha 10: 'return' sem valor na função 'positivo', que devolve bool
+programa rejeitado

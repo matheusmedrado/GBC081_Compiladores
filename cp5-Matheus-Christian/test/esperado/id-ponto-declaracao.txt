@@ -1,0 +1,6 @@
+erros:
+linha 5: 'e' não declarado
+usos:
+linha 3: a -> a@2 variável
+linha 4: c -> c@4 variável
+linha 5: e -> ?

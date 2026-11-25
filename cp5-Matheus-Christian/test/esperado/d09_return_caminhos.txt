@@ -1,0 +1,4 @@
+linha 11: função 'semElse' pode terminar sem 'return'
+linha 17: função 'noLaco' pode terminar sem 'return'
+linha 30: função 'vazia' pode terminar sem 'return'
+programa rejeitado

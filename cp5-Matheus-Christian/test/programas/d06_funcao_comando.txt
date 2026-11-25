@@ -1,0 +1,8 @@
+int conta(int n) {
+    return n + 1;
+}
+
+void main() {
+    conta(1);
+    int x = conta(conta(2));
+}

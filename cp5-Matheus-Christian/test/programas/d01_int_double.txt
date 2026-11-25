@@ -1,0 +1,15 @@
+double media(double a, double b) {
+    return (a + b) / 2;
+}
+
+int trunca(double x) {
+    return x;
+}
+
+void main() {
+    double d = 3;
+    d = 1 + 2.5;
+    int i = 2.0;
+    i = d;
+    d = media(1, 2);
+}

@@ -1,0 +1,11 @@
+erros:
+usos:
+linha 5: x -> x@4 variável
+linha 5: n -> n@3 parâmetro
+linha 8: x -> x@7 variável
+linha 8: n -> n@3 parâmetro
+linha 11: y -> y@10 variável
+linha 11: x -> x@7 variável
+linha 14: x -> x@4 variável
+linha 14: n -> n@3 parâmetro
+linha 18: x -> x@1 variável

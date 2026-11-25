@@ -1,0 +1,4 @@
+linha 7: aviso: 'd' pode ser usada sem valor
+linha 18: aviso: 'b' pode ser usada sem valor
+linha 18: aviso: 'c' pode ser usada sem valor
+programa aceito

@@ -1,0 +1,9 @@
+linha 6: inicialização de 'a': esperado int, veio bool
+linha 7: operador '+' não se aplica a int e string
+linha 8: 'c' não declarado
+linha 9: 'c' não declarado
+linha 9: 'c' não declarado
+linha 10: operador '&&' não se aplica a int e bool
+linha 11: atribuição a 'a': esperado int, veio double
+linha 13: 'dobro' é função; sem parênteses não é valor
+programa rejeitado

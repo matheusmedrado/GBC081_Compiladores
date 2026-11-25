@@ -1,0 +1,12 @@
+void main() {
+    bool b = true;
+    int i = 1;
+    int s = b + 1;
+    bool m = b < true;
+    if (i) {
+    }
+    while (!i) {
+    }
+    if (i != 0) {
+    }
+}

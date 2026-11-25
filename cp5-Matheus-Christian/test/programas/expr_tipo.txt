@@ -1,0 +1,8 @@
+void main() {
+    int a = 1;
+    bool b = true;
+    int c = a + b;
+    double d = 2.0 % 1;
+    b = !a;
+    a = -b;
+}

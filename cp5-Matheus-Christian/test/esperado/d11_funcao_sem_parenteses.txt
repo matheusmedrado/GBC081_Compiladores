@@ -1,0 +1,4 @@
+linha 9: 'cinco' é função; sem parênteses não é valor
+linha 11: 'cinco' é função, não variável
+linha 12: 'nada' é procedimento; sem parênteses não é valor
+programa rejeitado

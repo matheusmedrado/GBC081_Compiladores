@@ -1,0 +1,15 @@
+int metade(double x) {
+    return x / 2;
+}
+
+void nada() {
+    return 1;
+}
+
+bool positivo(int x) {
+    return;
+}
+
+double alarga(int x) {
+    return x;
+}

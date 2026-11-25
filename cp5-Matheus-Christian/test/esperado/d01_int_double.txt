@@ -1,0 +1,4 @@
+linha 6: 'return' de 'trunca': esperado int, veio double
+linha 12: inicialização de 'i': esperado int, veio double
+linha 13: atribuição a 'i': esperado int, veio double
+programa rejeitado

@@ -1,0 +1,13 @@
+double area(double base, double altura) {
+    return base * altura / 2;
+}
+
+int quadrado(int x) {
+    return x * x;
+}
+
+void main() {
+    double a = area(3, 4);
+    int q = quadrado('a');
+    q = quadrado(2.5);
+}

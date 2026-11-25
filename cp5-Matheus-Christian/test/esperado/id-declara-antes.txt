@@ -1,0 +1,11 @@
+erros:
+linha 2: 'x' não declarado
+linha 9: 'b' não declarado
+usos:
+linha 2: x -> ?
+linha 9: a -> a@8 variável
+linha 9: b -> ?
+linha 11: b -> b@10 variável
+linha 11: a -> a@8 variável
+linha 12: a -> a@8 variável
+linha 12: x -> x@5 variável

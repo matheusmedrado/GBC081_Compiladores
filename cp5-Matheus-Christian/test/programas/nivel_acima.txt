@@ -1,0 +1,23 @@
+int contador = 0;
+
+void incrementa(int passo) {
+    contador = contador + passo;
+    {
+        int dobro = passo * 2;
+        {
+            contador = contador + dobro;
+        }
+    }
+}
+
+int le() {
+    return contador;
+}
+
+void main() {
+    incrementa(2);
+    int v = le();
+    if (v > 5) {
+        incrementa(v);
+    }
+}

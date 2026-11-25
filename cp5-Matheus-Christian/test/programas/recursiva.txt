@@ -1,0 +1,17 @@
+int fat(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * fat(n - 1);
+}
+
+void contagem(int n) {
+    if (n > 0) {
+        contagem(n - 1);
+    }
+}
+
+void main() {
+    int x = fat(5);
+    contagem(x);
+}

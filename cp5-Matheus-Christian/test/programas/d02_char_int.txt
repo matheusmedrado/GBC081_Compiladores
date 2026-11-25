@@ -1,0 +1,10 @@
+void main() {
+    char c = 'a';
+    int i = c + 1;
+    int j = c;
+    double d = c;
+    char e = c + 1;
+    char f = 65;
+    bool menor = c < 'z';
+    i = c % 2;
+}
